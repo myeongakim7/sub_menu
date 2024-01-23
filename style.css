@@ -1,0 +1,69 @@
+/*리셋 CSS*/
+html,body,
+p,div,select,
+ul,dl,ol,dd,li,
+table,tr,th,td,
+h1,h2,h3,h4,
+form,fieldset,legend,
+table,tr,td,th,caption,
+address,blockquote {margin:0; padding:0;}
+address,em {font-style:normal;}
+fieldset, img {border:0 none;}
+h1,h2,h3,h4,h5 {font-size:1em;line-height: 1;margin:0;padding:0}
+legend, caption, hr{display:none;width:0; height:0; font-size:0;}
+input{padding:0;margin:0;border:0px;vertical-align: middle;}
+dl, dt, dd, ul, ol, li{ list-style:none;    padding:0;    margin:0;}
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{ display:block;}
+article,section{display:block;margin:0;padding:0;}
+img {vertical-align:top;}
+table {border-spacing:0px;border:0px;border-collapse:collapse}
+address,hr{display:none;}
+form {display:inline;}
+fieldset {padding:0;margin:0;border:none;}
+
+body{padding:0;margin:0; sans-serif;font-weight :400;font-size:10px;color:#000;line-height: 1; background:#fff; width:100%; height:100%; word-break:break-all;letter-spacing: -0.4px}
+
+a,a:hover, a:visited, a:active, a:link {text-decoration: none; color: #000; outline:none;}
+html,body{position:relative;width:100%;height:100%}
+input[type=text]::-ms-clear {display:none;}
+input[type=password]::-ms-clear {display:none;}
+input[type=tel]::-ms-clear {display:none;}
+button {outline:none; border:none; cursor:pointer; text-indent:-99999px;}
+html{font-size:10px;}
+
+
+/*common*/
+* {box-sizing:border-box;}
+
+.wrap{width: 100%;}
+.wrap .header{position: relative;;width: 100%; line-height: 5rem;}
+.wrap .header .logo{position: absolute; top:0; left:2rem; transform: translateY(50%);;width: 50px; height: 25px; background: url(/images/font-awesome-solid.svg) no-repeat; background-size: auto 100%;}
+.wrap .header .nav{position: absolute; top:50%; right:2rem; transform: translateY(50%);}
+.wrap .header .nav .icon_box{display: flex; gap:2rem;}
+.wrap .header .nav .icon_box .icon{display: inline-block;width: 22px; height: 22px; background-repeat: no-repeat; background-size: 100% 100%;}
+.wrap .header .nav .icon_box .icon.icon_location{background-image: url(/images/location-dot-solid.svg);}
+.wrap .header .nav .icon_box .icon.icon_search{background-image: url(/images/magnifying-glass-solid.svg);}
+.wrap .header .nav .icon_box .icon.icon_privacy{background-image: url(/images/user-regular.svg);}
+.wrap .header .nav .icon_box .icon.icon_hamburger{background-image: url(/images/bars-solid.svg); transition: all 0.2s;}
+.wrap .header .nav .icon_box .icon.icon_hamburger.close{background-image: url(images/xmark-solid.svg); }
+
+.wrap .sub_menu{display: none;position: fixed; top:5rem; left:0; right:0; width: 100%; height: 100%; }
+.wrap .sub_menu.on{display: block;}
+.wrap .sub_menu .dep1_ul{}
+.wrap .sub_menu .dep1_ul li{width: 100%; height: 100%; font-size: 2rem;line-height: 4.5rem; letter-spacing: 0.02em;}
+.wrap .sub_menu .dep1_ul li a{display: inline-block;width: 100%; height: 100%; padding-left: 2rem; }
+.wrap .sub_menu .dep1_ul > li{position: relative;;border-bottom:1px solid #fff;}
+.wrap .sub_menu .dep1_ul > li::after{content: ""; position: absolute; top:1.5rem; right:2.2rem; width: 20px; height: 20px; background: url(/images/angle-down-solid.svg) no-repeat; background-size: 100% 100%;  transition: all 0.3s;}
+.wrap .sub_menu .dep1_ul > li.open::after{transform: rotate(180deg);}
+
+.wrap .sub_menu .dep1_ul > li:first-child{border-top:1px solid #ccc;}
+
+.wrap .sub_menu .dep2_ul{display: none;}
+.wrap .sub_menu .dep2_ul > li{position: relative; width: 100%;} 
+.wrap .sub_menu .dep2_ul > li::after{content: ""; position: absolute; top:1.5rem; right:2.2rem; width: 20px; height: 20px; background: url(/images/angle-down-solid.svg) no-repeat; transition: all 0.3s;}
+.wrap .sub_menu .dep2_ul > li.open::after{content: ""; transform: rotate(180deg);}
+.wrap .sub_menu .dep2_ul li > a{ padding-left: 4rem;background-color: #cccccc60}
+
+.wrap .sub_menu .dep3_ul{display: none;}
+.wrap .sub_menu .dep3_ul > li{width: 100%; background-color: #8f8e8e50; border-top:1px solid #fff; border-bottom:1px solid #fff;} 
+.wrap .sub_menu .dep3_ul li > a{padding-left: 6rem;}
